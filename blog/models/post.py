@@ -1,12 +1,12 @@
 from django.db import models
-from .user import User
+from .user import UserModel
 
 
-class Blog(models.Model):
+class PostModel(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=10)
-    auther = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    auther = models.ForeignKey(UserModel, on_delete=models.DO_NOTHING)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        db_table = "blog"
+        db_table = "post"

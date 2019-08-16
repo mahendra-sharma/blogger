@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'blog'
 ]
 
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'api.error_handler.custom_exception_handler'
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -78,7 +82,7 @@ WSGI_APPLICATION = 'api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog',
+        'NAME': 'blogger',
         'USER': 'root',
         'PASSWORD': 'Passw0rd@123',
         'HOST': 'localhost',

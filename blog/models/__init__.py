@@ -1,2 +1,2 @@
-from .user import User
-from .blog import Blog
+from .user import UserModel
+from .post import PostModel
