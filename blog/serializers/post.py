@@ -1,8 +1,8 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework import serializers
 from ..models.post import PostModel
 
-
-class PostListSerializer(ModelSerializer):
+class PostListSerializer(serializers.ModelSerializer):
     class Meta:
         model = PostModel
         fields = '__all__'
+        depth=1
